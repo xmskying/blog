@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>利用Hexo + github pages服务，创建个人网站(二) | xmskying</title>
+
+  
+  <meta name="author" content="xmskying">
+  
+
+  
+  <meta name="description" content="接上一篇，长话短说，不扯了，直接来。
+上一篇说到用创建一个【用户名 + .github.io后缀】的repo，用来放个人网站的自定义首页。现在来说说怎么用hexo来创建博客。
+1、在github上，再创建一个repo我是创建了一个名为blog的repo【这个名字看你自己随意了】
+2、添加 SSH Key 到 GitHub从开始菜单里，找到git - git bash，然后输入：1ssh-keygen -t rsa -C &amp;quot;email@example.com&amp;quot;
+“email@example.com” 要修改为你自己的github邮箱，然后直接回车，中途会提示你设置密码，这一步可以直接回车，代表不设置密码。">
+  
+
+  
+  
+  <meta name="keywords" content="Hexo,git,github page">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="利用Hexo + github pages服务，创建个人网站(二)"/>
+
+  <meta property="og:site_name" content="xmskying"/>
+
+  
+  <meta property="og:image" content="/blog/favicon.ico"/>
+  
+
+  <link href="/blog/favicon.ico" rel="icon">
+  <link rel="alternate" href="/blog/atom.xml" title="xmskying" type="application/atom+xml">
+  <link rel="stylesheet" href="/blog/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/blog/"></a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/blog/">Home</a></li>
+      
+        <li><a href="/blog/archives">Archives</a></li>
+      
+        <li><a href="/blog/../">About</a></li>
+      
+        <li><a href="/blog/">Test</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>利用Hexo + github pages服务，创建个人网站(二)</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/blog/2018/01/05/利用Hexo-github-pages服务，创建个人网站-二/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-01-05T08:52:06.000Z">
+          2018-01-05
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>接上一篇，长话短说，不扯了，直接来。</p>
+<p>上一篇说到用创建一个【用户名 + .github.io后缀】的repo，用来放个人网站的自定义首页。<br>现在来说说怎么用hexo来创建博客。</p>
+<h2 id="1、在github上，再创建一个repo"><a href="#1、在github上，再创建一个repo" class="headerlink" title="1、在github上，再创建一个repo"></a>1、在github上，再创建一个repo</h2><p>我是创建了一个名为blog的repo【这个名字看你自己随意了】</p>
+<h2 id="2、添加-SSH-Key-到-GitHub"><a href="#2、添加-SSH-Key-到-GitHub" class="headerlink" title="2、添加 SSH Key 到 GitHub"></a>2、添加 SSH Key 到 GitHub</h2><p>从开始菜单里，找到git - git bash，然后输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p>“email@example.com” 要修改为你自己的github邮箱，然后直接回车，中途会提示你设置密码，这一步可以直接回车，代表不设置密码。</p>
+<a id="more"></a>
+<p>此时，命令行中会提示创建SSH成功，你可以直接进去C:\Users\你的电脑用户名.ssh目录下，找到id_rsa.pub文件，然后使用编辑器打开它，全选复制到github的添加<a href="https://github.com/settings/ssh/new" target="_blank" rel="noopener">SSH Key面板</a>里。<br>title 随意，你自己能记住就好。<br>测试是否可以成功链接，输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>会提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Are you sure you want to continue connecting (yes/no)?</span><br></pre></td></tr></table></figure></p>
+<p>输入：yes，然后回车。<br>不出意外的话，会显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi 【这里是你的github用户名】! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></p>
+<h2 id="3、全局安装hexo"><a href="#3、全局安装hexo" class="headerlink" title="3、全局安装hexo"></a>3、全局安装hexo</h2><p>输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo -g</span><br></pre></td></tr></table></figure></p>
+<p>接下去就是等待了，npm慢的话，自行更改为cnpm</p>
+<h2 id="4、新建hexo项目"><a href="#4、新建hexo项目" class="headerlink" title="4、新建hexo项目"></a>4、新建hexo项目</h2><p>在本地文件一个blog目录，【我这边是跟上面第一步创建的repo同名】，然后进入到blog目录，执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
+<p>然后就是等待了。</p>
+<h2 id="5、生成静态文件"><a href="#5、生成静态文件" class="headerlink" title="5、生成静态文件"></a>5、生成静态文件</h2><p>执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
+<h2 id="5、本地预览博客效果"><a href="#5、本地预览博客效果" class="headerlink" title="5、本地预览博客效果"></a>5、本地预览博客效果</h2><p>执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
+<p>执行后，浏览器打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可访问默认主题的hexo博客了。</p>
+<h2 id="6、修改-config-yml文件"><a href="#6、修改-config-yml文件" class="headerlink" title="6、修改_config.yml文件"></a>6、修改_config.yml文件</h2><p>在/blog目录下找到_config.yml文件，编辑：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: https://yourName.github.io/blog 【编辑这里，修改为你自己的地址】</span><br><span class="line">root: /blog/ 【还有这里也要修改】</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true // true为允许生成图片目录</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git【编辑这里】</span><br><span class="line">  repo: https://github.com/yourName/blog.git【编辑这里，修改为你自己的地址】</span><br><span class="line">  branch: master【编辑这里】</span><br></pre></td></tr></table></figure>
+<h2 id="7、部署到github"><a href="#7、部署到github" class="headerlink" title="7、部署到github"></a>7、部署到github</h2><p>首先需要按安装hexo-deployer-git插件，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>然后执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p>接下去你会发现在你的github上的blog这个repo里，就会出现一些文件。<br>等几分钟，访问你的blog地址：<code>https://yourName.github.io/blog/</code>，<br>正常的话，你将能看到你自己搭建的博客了。</p>
+<p>ps： hexo 常用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init // 初始化</span><br><span class="line">hexo g // 生成静态文件</span><br><span class="line">hexo s // 开启本地服务</span><br><span class="line">hexo d // 发布</span><br><span class="line">hexo clean // 清空静态页</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/blog/tags/Hexo/">Hexo</a><a href="/blog/tags/git/">git</a><a href="/blog/tags/github-page/">github page</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2018 xmskying
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>

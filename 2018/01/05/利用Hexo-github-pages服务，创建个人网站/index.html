@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>利用Hexo + github pages服务，创建个人网站 | xmskying</title>
+
+  
+  <meta name="author" content="xmskying">
+  
+
+  
+  <meta name="description" content="一直想做一个属于自己的个人网站，早在2017年就买了个域名：www.xmthing.com，然后也在搬瓦工上年付了一个便宜的vps主机，在上面部署了ss服务、WebStorm的激活域名、也用wordPress搭建了一个博客系统，那段时间也热情的发布了几篇文章，后面懒癌犯了，再加上那台vps访问越来越卡了，估计IP被墙了，也就一直没更新，同时那台vps也快到期了，不打算续了。
+后来从网上经常看到Hexo这个字眼，也看到了别人的一些博客网站，域名都是使用的是github的二级域名，很好奇，遂开始研究。">
+  
+
+  
+  
+  <meta name="keywords" content="Hexo,git,github page">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="利用Hexo + github pages服务，创建个人网站"/>
+
+  <meta property="og:site_name" content="xmskying"/>
+
+  
+  <meta property="og:image" content="/blog/favicon.ico"/>
+  
+
+  <link href="/blog/favicon.ico" rel="icon">
+  <link rel="alternate" href="/blog/atom.xml" title="xmskying" type="application/atom+xml">
+  <link rel="stylesheet" href="/blog/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/blog/"></a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/blog/">Home</a></li>
+      
+        <li><a href="/blog/archives">Archives</a></li>
+      
+        <li><a href="/blog/../">About</a></li>
+      
+        <li><a href="/blog/">Test</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>利用Hexo + github pages服务，创建个人网站</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/blog/2018/01/05/利用Hexo-github-pages服务，创建个人网站/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-01-05T05:52:04.000Z">
+          2018-01-05
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>一直想做一个属于自己的个人网站，早在2017年就买了个域名：<a href="https://www.xmthing.com" target="_blank" rel="noopener">www.xmthing.com</a>，然后也在搬瓦工上年付了一个便宜的vps主机，在上面部署了ss服务、WebStorm的激活域名、也用wordPress搭建了一个博客系统，那段时间也热情的发布了几篇文章，后面懒癌犯了，再加上那台vps访问越来越卡了，估计IP被墙了，也就一直没更新，同时那台vps也快到期了，不打算续了。</p>
+<p>后来从网上经常看到Hexo这个字眼，也看到了别人的一些博客网站，域名都是使用的是github的二级域名，很好奇，遂开始研究。<br><a id="more"></a><br>百度、google了好一阵，发现别人的主页直接就是博客系统的主页，而我设想的是访问github的二级域名，比如我的：<a href="https://xmskying.github.io">xmskying.github.io</a> 默认访问的是我自定义的一个主页，【因为想在自己折腾点东西，把首页设计的好看一点。[撞到玻璃]】；然后在这个主页上，设置链接跳转到博客系统的主页上，即：<a href="https://xmskying.github.io/blog/">xmskying.github.io/blog</a>。</p>
+<p>昨天晚上下班后，回到宿舍，稍作休息下，直接开启我那半个月未开机的电脑起来。不要怕，就是干！</p>
+<p>…<br>…<br>…<br>…<br>…</p>
+<p>折腾到快23点，依然不成功，头疼。<br>遂放弃…</p>
+<p>今天早上还是不死心，我就不信了，不成功的话，就当做学习git操作吧。<br>继续折腾了，<br>续折腾了，<br>折腾了，<br>腾了，<br>了，<br>，<br>终于成功了！泪流满面得写下这篇文章，记录下过程。</p>
+<p>好了，废话不多说，let’s do it…</p>
+<h2 id="1、在本机电脑上安装node-js环境"><a href="#1、在本机电脑上安装node-js环境" class="headerlink" title="1、在本机电脑上安装node.js环境"></a>1、在本机电脑上安装node.js环境</h2><p>这步没什么好说的，就是直接去node.js的官网下载安装包来安装，就可以了。node.js<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">官网</a>。<br>在Windows上安装时务必选择全部组件，包括勾选Add to Path。<br>安装完成后，在Windows环境下，请打开命令提示符，然后输入node -v，如果安装正常，你应该看到一个v开头的版本号，比如我的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\sky&gt;node -v</span><br><span class="line">v6.5.0</span><br></pre></td></tr></table></figure>
+<p>安装完node.js时，也默认帮我们安装了npm包管理器，什么是npm呢？简单点说：npm包管理器用于使用npm命令下载Node.js的依赖包【package manager】。<br>同样的你可以使用如下命令查看npm版本，比如我的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\sky&gt;npm -v</span><br><span class="line">3.10.3</span><br></pre></td></tr></table></figure>
+<h2 id="2、安装git命令行工具"><a href="#2、安装git命令行工具" class="headerlink" title="2、安装git命令行工具"></a>2、安装git命令行工具</h2><p>打开git<a href="https://git-scm.com/" target="_blank" rel="noopener">官网</a>，下载相应平台的安装包，然后一路安装下去即可。<br>安装完，在开始菜单里，应该就可以找到“Git”-&gt;“Git Bash”，打开它，就是显示一个命令行窗口，这就说明Git安装成功了！ 如下图：</p>
+<p><img src="1.png" alt="图片"></p>
+<p>然后在git命令行打上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot; </span><br><span class="line">git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p>上面的Your Name要修改成你自己的用户名，email@example.com要修改成你自己的邮箱地址</p>
+<h2 id="3、在github上创建一个repo"><a href="#3、在github上创建一个repo" class="headerlink" title="3、在github上创建一个repo"></a>3、在github上创建一个repo</h2><p>详细教程可查看github <a href="https://pages.github.com/" target="_blank" rel="noopener">官网教程</a></p>
+<p>###简单说一下：</p>
+<p>1、新建一个repo，名字为你的【用户名 + .github.io后缀】，比如我的：xmskying.github.io</p>
+<p><img src="2.png" alt=""></p>
+<p>2、clone到本地<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/username/username.github.io</span><br></pre></td></tr></table></figure></p>
+<p>3、打开clone下来的文件夹，在该目录下执行下面命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;Hello World&quot; &gt; index.html</span><br></pre></td></tr></table></figure></p>
+<p>该命令会新建一个index.html文件，内容写入“Hello World” </p>
+<p>4、提交到github上，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br><span class="line">git commit -m &quot;Initial commit&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<p>5、打开你的主页网址，例如：<code>https://username.github.io</code>，你会发现可以访问了，界面上出现了 Hello World 几个字。</p>
+<p>6、接下去就不用我说了吧，以后这个index.html 可以修改成你想要自定义的首页样式，爱咋整咋整！</p>
+<p>Enjoy it！</p>
+<p>不知不觉写了这么长，发现hexo的还没讲到，还是放到下一篇去讲吧。/哭笑</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/blog/tags/Hexo/">Hexo</a><a href="/blog/tags/git/">git</a><a href="/blog/tags/github-page/">github page</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2018 xmskying
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>

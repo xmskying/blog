@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>点击按钮圆形波纹效果 | xmskying</title>
+
+  
+  <meta name="author" content="xmskying">
+  
+
+  
+  <meta name="description" content="不多说，直接上代码。
+html结构：123456789101112131415&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;	&amp;lt;title&amp;gt;按钮点击圆形波纹效果&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;	&amp;lt;div class=&amp;quot;lists&amp;quot; id=&amp;quot;js_lists&amp;quot;&amp;gt;			&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;btn green&amp;quot;&amp;gt;按钮一&amp;lt;/a&amp;gt;		&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;btn red&amp;quot;&amp;gt;按钮二&amp;lt;/a&amp;gt;		&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;btn yellow&amp;quot;&amp;gt;按钮三&amp;lt;/a&amp;gt;		&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;btn blue&amp;quot;&amp;gt;按钮四&amp;lt;/a&amp;gt;	&amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;">
+  
+
+  
+  
+  <meta name="keywords" content="css3,html,js">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="点击按钮圆形波纹效果"/>
+
+  <meta property="og:site_name" content="xmskying"/>
+
+  
+  <meta property="og:image" content="/blog/favicon.ico"/>
+  
+
+  <link href="/blog/favicon.ico" rel="icon">
+  <link rel="alternate" href="/blog/atom.xml" title="xmskying" type="application/atom+xml">
+  <link rel="stylesheet" href="/blog/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/blog/"></a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/blog/">Home</a></li>
+      
+        <li><a href="/blog/archives">Archives</a></li>
+      
+        <li><a href="/blog/../">About</a></li>
+      
+        <li><a href="/blog/">Test</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>点击按钮圆形波纹效果</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/blog/2018/01/20/点击按钮圆形波纹效果/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-01-20T13:31:43.000Z">
+          2018-01-20
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>不多说，直接上代码。</p>
+<h2 id="html结构："><a href="#html结构：" class="headerlink" title="html结构："></a>html结构：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;按钮点击圆形波纹效果&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div class=&quot;lists&quot; id=&quot;js_lists&quot;&gt;	</span><br><span class="line">		&lt;a href=&quot;#&quot; class=&quot;btn green&quot;&gt;按钮一&lt;/a&gt;</span><br><span class="line">		&lt;a href=&quot;#&quot; class=&quot;btn red&quot;&gt;按钮二&lt;/a&gt;</span><br><span class="line">		&lt;a href=&quot;#&quot; class=&quot;btn yellow&quot;&gt;按钮三&lt;/a&gt;</span><br><span class="line">		&lt;a href=&quot;#&quot; class=&quot;btn blue&quot;&gt;按钮四&lt;/a&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="css样式："><a href="#css样式：" class="headerlink" title="css样式："></a>css样式：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">	background: #4d3690</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">* &#123;</span><br><span class="line">	margin: 0;</span><br><span class="line">	padding: 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.lists &#123;</span><br><span class="line">	margin-top: 300px;</span><br><span class="line">	text-align: center</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">	text-decoration: none</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.btn &#123;</span><br><span class="line">	position: relative;</span><br><span class="line">	display: inline-block;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	margin: 0 20px;</span><br><span class="line">	padding: 25px 60px;</span><br><span class="line">	color: #fff;</span><br><span class="line">	text-align: center;</span><br><span class="line">	font-size: 1pc;</span><br><span class="line">	cursor: pointer</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.green &#123;</span><br><span class="line">	background: #30ea30</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.red &#123;</span><br><span class="line">	background: #ea3051</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.yellow &#123;</span><br><span class="line">	background: #eab230</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.blue &#123;</span><br><span class="line">	background: #3079ea</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ripple &#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	top: 0;</span><br><span class="line">	left: 0;</span><br><span class="line">	z-index: 1;</span><br><span class="line">	width: 2px;</span><br><span class="line">	height: 2px;</span><br><span class="line">	border-radius: 50%;</span><br><span class="line">	background: #fff;</span><br><span class="line">	-webkit-animation: ripple 1.2s;</span><br><span class="line">	animation: ripple 1.2s</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@-webkit-keyframes ripple &#123;</span><br><span class="line">	0% &#123;</span><br><span class="line">		opacity: .6;</span><br><span class="line">		-webkit-transform: scale(0)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	to &#123;</span><br><span class="line">		opacity: 0;</span><br><span class="line">		-webkit-transform: scale(200)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes ripple &#123;</span><br><span class="line">	0% &#123;</span><br><span class="line">		opacity: .6;</span><br><span class="line">		transform: scale(0)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	to &#123;</span><br><span class="line">		opacity: 0;</span><br><span class="line">		transform: scale(200)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="js："><a href="#js：" class="headerlink" title="js："></a>js：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function ripple()&#123;</span><br><span class="line">	var $js_lists = $(&quot;#js_lists&quot;);</span><br><span class="line">	var $ripple = $(&quot;&lt;span class=&apos;ripple&apos;&gt;&lt;/span&gt;&quot;);</span><br><span class="line">	$js_lists.on(&quot;click&quot;,&quot;.btn&quot;,function(e)&#123;</span><br><span class="line"></span><br><span class="line">		var _this = $(this);</span><br><span class="line">		</span><br><span class="line">		//获取点击坐标</span><br><span class="line">		var x = e.pageX;</span><br><span class="line">			y = e.pageY;</span><br><span class="line"></span><br><span class="line">		//console.log(x,y);</span><br><span class="line"></span><br><span class="line">		var left = x - _this.offset().left;</span><br><span class="line">		var top = y - _this.offset().top;</span><br><span class="line">		</span><br><span class="line">		console.log(left,top);</span><br><span class="line"></span><br><span class="line">		$ripple.css(&#123;</span><br><span class="line">			left:left-1,</span><br><span class="line">			top:top-1</span><br><span class="line">		&#125;);</span><br><span class="line"></span><br><span class="line">		_this.append($ripple);</span><br><span class="line"></span><br><span class="line">		//动画结束后</span><br><span class="line">		$ripple.on(&quot;animationend&quot;,function()&#123;</span><br><span class="line">			$(this).remove();</span><br><span class="line">		&#125;)</span><br><span class="line"></span><br><span class="line">		return false;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$(function()&#123;</span><br><span class="line">	ripple()</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>直接看<a href="http://jsdm.com/anon/paint/osqPL" target="_blank" rel="noopener">demo</a></p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/blog/tags/css3/">css3</a><a href="/blog/tags/html/">html</a><a href="/blog/tags/js/">js</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2018 xmskying
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>
